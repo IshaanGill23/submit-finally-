@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Congratulations</title>
+    <style>
+      body {
+        background-color: #f0e68c; /* Light khaki background */
+      }
+
+      h1 {
+        color: #4b0082; /* Indigo text color */
+        text-align: center;
+        margin-top: 20%;
+        font-size: 3em;
+      }
+      .redirect-link {
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.5em;
+        color: #4b0082;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      // Redirect to quiz.html after 3 seconds
+      setTimeout(function () {
+        window.location.href = "quiz.html";
+      }, 3000);
+    </script>
+  </head>
+  <body>
+    <h1>Congratulations you got it right</h1>
+    <a class="redirect-link" href="Quiz.html">Go back to Quiz</a>
+  </body>
+</html>

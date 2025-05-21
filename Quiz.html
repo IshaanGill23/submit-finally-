@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz for Fun</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Inline background image for the body -->
+    <style>
+      body {
+        background-image: url("https://www.stantec.com/content/dam/stantec/images/projects/0073/bridgewater-forest-communities-2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+    </style>
+  </head>
+
+  <!-- Page body starts -->
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <h1 class="site-title">Naawi Oodena</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Who We Are</a></li>
+        <li><a href="Naawi-oodena2.html">Photos from our community</a></li>
+
+        <!-- Dropdown menu for extra links -->
+        <li class="dropdown">
+          <a href="#" class="parent-link">Extra stuff</a>
+          <ul class="dropdown-content">
+            <li><a href="Quiz.html">Quiz for fun</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <br />
+
+    <!-- Quiz form container -->
+    <div class="failed">
+      <form action="congratulations.html" method="GET">
+        <h1 style="color: #112b6c">Quiz for fun</h1>
+
+        <!-- Question 1 -->
+        <label for="question1">1. What is the meaning of Naawi Oodena?</label
+        ><br />
+        <input type="text" id="question1" name="question1" /><br /><br />
+
+        <!-- Question 2 -->
+        <label for="question2">2. Where is Naawi Oodena located?</label><br />
+        <input type="text" id="question2" name="question2" /><br /><br />
+
+        <!-- Question 3 -->
+        <label for="question3">3. What does Naawi Oodena include?</label><br />
+        <input type="text" id="question3" name="question3" /><br /><br />
+
+        <!-- Submit button -->
+        <fieldset>
+          <input type="submit" value="Submit" class="submit-btn" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- Extra spacing before footer -->
+    <br />
+    <br />
+    <br />
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2035 Naawi Oodena. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

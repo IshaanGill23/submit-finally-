@@ -1,0 +1,330 @@
+/*
+Colour Choices:
+- The design uses a deep forest green (#263a26) for headers and footers to represent land, nature, and groundedness—this connects to the themes of Naawi-Oodena and Indigenous communities.
+- Soft whites (#e5e3e3) and light blues (#e6f0ff) offer strong contrast for readability while maintaining a calm, respectful tone.
+- Accent colors like #4caf50 (submit button) symbolize growth and harmony.
+- High contrast is maintained (ratios > 7:1 for light text on dark backgrounds and vice versa) to meet WCAG standards.
+*/
+
+/* Body */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif; /* Clear, sans-serif font for readability */
+  background-image: url("https://images.squarespace-cdn.com/content/v1/6202d66b82bc6869a455f6df/89dabd00-1d4a-4144-82c1-de2d6ae25cca/DJI_0441.jpg");
+  background-size: cover; /* Image covers entire page */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: #112b6c; /* Dark blue for text */
+  line-height: 1.6; /* Improved readability */
+  animation: fadeInBody 2s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Keyframe animations for fading and sliding effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background-color: #263a26; /* Dark green background */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1% 0;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background and shadow transitions */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.navbar li {
+  position: relative;
+  transition: transform 0.3s ease; /* Hover effect for list items */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.navbar a {
+  display: block;
+  padding: 1em 1.5em;
+  margin: 0 1vw;
+  text-decoration: none;
+  color: #e9e8e8; /* Light gray text */
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.navbar a:hover {
+  background-color: #e6f0ff; /* Light blue on hover */
+  color: #0f0f0f; /* Dark text on hover */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.navbar li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #263a26;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar li:hover ul {
+  display: block;
+  opacity: 1; /* Show dropdown on hover */
+}
+
+.navbar li ul li {
+  width: 100%;
+}
+
+.navbar li ul li a {
+  padding: 10px 15px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li ul li a:hover {
+  background-color: #4e6e4e; /* Hover effect for dropdown items */
+}
+
+/* Title */
+.site-title {
+  text-align: center;
+  font-size: 5vw; /* Responsive font size */
+  color: #e5e3e3; /* Light gray text */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for contrast */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  font-family: "Georgia", serif; /* Elegant serif font for title */
+  font-weight: bold;
+  transition: letter-spacing 0.3s ease; /* Letter-spacing effect on hover */
+}
+
+.site-title:hover {
+  letter-spacing: 0.15em; /* Expand spacing on hover */
+}
+
+/* Content Sections */
+.content-section {
+  margin-top: 5vh;
+  padding: 3.5%;
+  width: 90%;
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  border-radius: 1em;
+  box-shadow: 0 0.4em 0.8em rgba(243, 240, 240, 0.15); /* Light shadow for depth */
+  margin-left: auto;
+  margin-right: auto;
+  animation: slideFadeIn 1.5s ease-in-out; /* Slide and fade effect */
+  font-size: 1em;
+  transition: transform 0.3s ease; /* Hover scale effect */
+}
+
+.content-section:hover {
+  transform: scale(1.01); /* Slight enlargement on hover */
+}
+
+/* Gallery */
+.images-of-now {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 5% auto;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in effect */
+  color: #e5e3e3; /* Light gray text */
+  width: 90%;
+}
+
+.image-block {
+  flex: 1 1 25%;
+  max-width: 30%;
+  text-align: center;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0 0.4em 0.8em rgba(255, 255, 255, 0.15); /* Subtle shadow for images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.image-block img:hover {
+  transform: scale(1.05); /* Scale image on hover */
+  box-shadow: 0 0.8em 1.6em rgba(255, 255, 255, 0.2); /* Light shadow effect */
+}
+
+.image-caption {
+  font-size: 1em;
+  color: #263a26; /* Dark green text */
+  background: rgba(255, 255, 255, 0.92); /* Semi-transparent white background */
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  box-shadow: 0 0.2em 0.8em rgba(38, 58, 38, 0.08); /* Light shadow for captions */
+  border: 1px solid #b5b5b5; /* Border for clarity */
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+}
+
+.image-caption:hover {
+  transform: translateY(-0.3em) scale(1.03); /* Lift effect on hover */
+  box-shadow: 0 0.4em 1.6em rgba(38, 58, 38, 0.15); /* Darker shadow effect */
+}
+
+/* Headings */
+.ineedthis {
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom: 2em;
+  color: #003366; /* Deep blue color */
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.ineedthis:hover {
+  transform: scale(1.02); /* Slight enlargement on hover */
+  letter-spacing: 0.1em; /* Letter-spacing effect */
+}
+
+/* Error/Quiz Section */
+.failed {
+  background-color: #0f0f0f; /* Dark background */
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5% auto;
+  position: relative;
+  color: #e5e3e3;
+  font-size: 1.5rem;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #4caf50; /* Green for submit button */
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 2em;
+}
+
+.submit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Footer */
+.footer {
+  background-color: #263a26; /* Dark green background */
+  color: #e5e3e3; /* Light gray text */
+  text-align: center;
+  padding: 3% 0;
+  width: 100%;
+  font-size: 0.9em;
+  margin-top: 3%;
+  animation: fadeIn 2s ease-in-out; /* Fade-in effect */
+  transition: opacity 0.5s ease;
+}
+
+.footer:hover {
+  transform: scale(1.01); /* Slight enlargement on hover */
+}
+
+/* Map Container */
+.map-container {
+  width: 60%;
+  max-width: 100%;
+  margin: 5% auto 0 auto;
+  text-align: center;
+  background-color: #1a1a1a; /* Dark background */
+  padding: 5%;
+  border-radius: 1em;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in effect */
+  transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+  transform: scale(1.01); /* Slight enlargement on hover */
+}
+
+.sasuke-map {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  border-radius: 0.8em;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sasuke-map:hover {
+  transform: scale(1.02); /* Slight enlargement on hover */
+  box-shadow: 0 0 1.8em rgba(255, 255, 255, 0.5); /* Enhanced shadow effect */
+}
